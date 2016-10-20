@@ -18,11 +18,9 @@ body {
 #img-logo{
     width: 170px;
     display: inline;
-    /*float: left;*/
     padding-left: 50px;
 }
 #list {
-    /*display: inline-flex;*/
     padding: 0px 70px 0px 60px;
     border-top: 1px solid #c3c3c3;
     border-bottom: 1px solid #c3c3c3;
@@ -42,13 +40,6 @@ li {
     float: left;
     padding: 15px
 }
-/*#main {
-    
-}
-#img-main {
-    width: 100%;
-    margin-top: 3px;
-}*/
 
 .accordian {
     width: 100%; 
@@ -80,14 +71,9 @@ li {
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
-    /*If you hover on the images now you should be able to 
-    see the basic accordian*/
+   
 }
 
-/*Reduce with of un-hovered elements*/
-/*.accordian ul:hover li {width: 40px;}*/
-/*Lets apply hover effects now*/
-/*The LI hover style should override the UL hover style*/
 .accordian ul li:hover {width: 620px;}
 
 
@@ -96,12 +82,11 @@ li {
     height: 100%;
 }
 
-/*Image title styles*/
 .image_title {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 0;  
-width: 640px;   
+    width: 640px;   
 
 }
 .image_title a {
@@ -109,5 +94,24 @@ width: 640px;
     color: #fff;
     text-decoration: none;
     padding: 20px;
+    font-size: 16px;
+}
+
+.thumbnail {}
+    
+
+.thumbnail img {
+    max-height: 150px;
+    min-height: 150px;
+    min-width: 350px;
+}
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight: bold;
     font-size: 16px;
 }
