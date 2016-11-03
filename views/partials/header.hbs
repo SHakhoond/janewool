@@ -1,26 +1,31 @@
-		<div id="headWrapper">
-			<div id="logo">
-				<img id="img-logo" src="../images/logo.png">				
-				
-				<button id="login"> 
-				{{# if login }}
-					<li><a href="/user/profile">User Account</a></li>
-	        <li role="separator" class="divider"></li>
-	        <li><a href="/user/logout">Logout</a></li>
-        {{ else }}
-          <li><a href="/user/signup">Sign up</a></li>
-          <li><a href="/user/signin">Sign in</a></li>
-        {{/if}}
+<div id="headWrapper">
+  <div id="logo">
+    <img id="img-logo" src="../images/logo.png">        
+      <button id="login">
+        <ul>
+          {{# if login }}
+            <li><a href="/user/profile">User Account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/user/logout">Logout</a></li>
+          {{ else }}
+            <li><a href="/user/signup">Sign up</a></li>
+            <li><a href="/user/signin">Sign in</a></li>
+          {{/if}}
+          <li>
+          <a href="/shopping-cart"><i class="shopping-cart" aria-hidden="true"></i>Shopping cart</a>
+          <span class="badge">{{session.cart.totalQty}}</span>
+          </li>
+        </ul> 
         </button>
         <nav id="list">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="blog/journal.html">Journal</a></li>
-						<li><a href="/shop">Online Shop</a></li>
-						<li>About us</li>
-						<li>Product</li>
-						<li>Contact</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="blog/journal.html">Journal</a></li>
+            <li><a href="/shop">Online Shop</a></li>
+            <li>About us</li>
+            <li>Product</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </div>

@@ -1,16 +1,22 @@
-/*body {
-    margin: 0 70px 0 70px;
-}*/
-#search {
-    float: right;
-    margin: 2.5% 30px 0 0 ;
+body {
+    margin: 0 8% 0 8%;
 }
+
 #login {
-    list-style-type: none;
     float: right;
-    margin: 1.5% 30px 0 0 ;
+    margin: 4% 0 0 ;
     border: none;
     background-color: #fff;
+}
+
+#login ul{
+    list-style-type: none;
+    display: inline-flex;
+
+}
+
+#login ul li{
+    margin: 0px 0px 0px 27px;
 }
 
 #register {
@@ -29,7 +35,8 @@
     border-bottom: 1px solid #c3c3c3;
     margin-top: -3px;
 }
-ul {
+
+nav#list ul {
     list-style-type: none;
     display: inline-flex;
     margin: 0;
@@ -38,76 +45,68 @@ ul {
     background-color: #rgba(51, 51, 51, 0.29);
 }
 
-li {
-    font-family: 'Open Sans', sans-serif;    font-size: 17px;
+nav#list ul li {
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 17px;
     float: left;
-    padding: 15px
+    padding: 15px 20px 15px 20px;
 }
 
 .accordian {
-    width: 100%; 
-    height: 450px;
-    overflow: hidden;
-    margin: 30px 0 0 0;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  width: 90%; 
+  height: 470px;
+  overflow: hidden;
+  
+  /*Time for some styling*/
+  margin: 24px auto;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 }
 
 /*A small hack to prevent flickering on some browsers*/
 .accordian ul {
-    width: 98%;
-    height: 100%
+  width: 2000px;
+  /*This will give ample space to the last item to move
+  instead of falling down/flickering during hovers.*/
 }
 
 .accordian li {
-    position: relative;
-    display: block;
-    width: 194px;
-    float: left;    
-    border-left: 1px solid #888;    
-    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    
-    /*Transitions to give animation effect*/
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-   
+  position: relative;
+  display: block;
+  width: 11%;
+  float: left;
+  right: 40px;
+  border-left: 1px solid #888;
+  
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
 }
 
-.accordian ul li:hover {width: 620px;}
+.accordian ul:hover li {
+  width: 6.5%;
+}
 
+.accordian ul li:hover {
+  width: 700px;
+}
 
 .accordian li img {
-    display: block;
-    height: 100%;
+  display: block;
 }
 
-.image_title {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;  
-    width: 640px;   
-
+.accordian img {
+  width: 720px;
 }
-.image_title a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 16px;
-}
-
-.thumbnail {}
-    
 
 .thumbnail img {
     max-height: 150px;
     min-height: 150px;
     min-width: 350px;
-}
 }
 
 .thumbnail .description {
@@ -118,3 +117,79 @@ li {
     font-weight: bold;
     font-size: 16px;
 }
+
+
+/*----------------------max-width1400--------------------------*/
+@media screen and (max-width: 1400px){
+  .accordian li {
+    width: 10%;
+  }
+
+  .accordian ul:hover li {width: 5.5%;}
+
+  .accordian ul li:hover {width: 650px;}
+}
+
+/*------------- --------max-width1200------------------------*/
+@media screen and (max-width: 1200px){
+  .accordian li {
+    width: 9%;
+  }
+
+  .accordian ul:hover li {width: 3%;}
+
+  .accordian ul li:hover {width: 650px;}
+}
+
+/*-----------------------max-width1080----------------------*/
+@media screen and (max-width: 1080px){
+  .accordian li {
+    width: 8%;
+  }
+
+  .accordian ul:hover li {width: 1.7%;}
+
+  .accordian ul li:hover {width: 650px;}
+}
+
+/*-----------------------max-width1000---------------------------*/
+@media screen and (max-width: 1000px){
+  nav#list ul li {
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 14px;
+    float: left;
+    padding: 15px 20px 15px 20px;
+  }
+  nav#list {
+    padding: 0px 70px 0px 34px;
+  }
+  .accordian li {
+    width: 7%;
+  }
+
+  .accordian ul:hover li {width: 1.7%;}
+
+  .accordian ul li:hover {width: 550px;}
+}
+
+/*--------------------max-width800--------------------------------*/
+@media screen and (max-width: 800px){
+  nav#list ul li {
+        font-size: 13px;
+  }
+  .accordian {
+    height: 400px;
+  }
+  .accordian li {
+    width: 6%;
+  }
+  .accordian img {
+  width: 620px;
+  }
+
+  .accordian ul:hover li {width: 0.7%;}
+
+  .accordian ul li:hover {width: 500px;}
+}
+
+
